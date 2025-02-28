@@ -1,0 +1,9 @@
+.containerInfo{
+    margin: 0 80px 0 80px;
+}
+
+@media (max-width: 768px) {
+  .containerInfo {
+    margin: 0 ;
+  }
+}

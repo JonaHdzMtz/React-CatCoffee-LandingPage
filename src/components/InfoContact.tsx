@@ -4,8 +4,8 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 
 export const InfoContact = () => {
   return (
-    <div id="contactus" className=" shadow-2xl shadow-gray-500 rounded-2xl hover:scale-101 duration-300">
-      <div className=" mt-20 bg-amber-950 text-center text-white flex flex-col items-center gap-8 py-10  rounded-2xl hover:font-bold duration-300">
+    <div id="contactus" className=" shadow-2xl shadow-gray-500 rounded-2xl hover:scale-101 duration-300" style={{marginTop:"50px"}}>
+      <div className="  bg-amber-950 text-center text-white flex flex-col items-center gap-8 py-10  rounded-2xl hover:font-bold duration-300">
         <p className="text-4xl ">Contacto</p>
         <div className="flex gap-5 items-center  ">
           <TbGpsFilled className="scale-200" />

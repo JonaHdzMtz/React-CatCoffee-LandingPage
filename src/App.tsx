@@ -7,6 +7,7 @@ import { CircleCatItem } from "./components/CircleCatItem";
 import { catsList } from "./data/CatsData";
 import { InfoContact } from "./components/InfoContact";
 import { ModalDate } from "./components/ModalDate";
+import "./App.css"
 function App() {
   const [count, setCount] = useState(0);
   const [catData, setCatData] = useState(catsList);
@@ -19,10 +20,10 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <div className="min-h-full w-full">
+      <div className="min-h-full w-full bg-amber-50">
         <div>
           <img
-            className="w-full h-screen sm:object-cover object-cover"
+            className="w-full h-screen sm:object-cover object-cover "
             src="https://images3.alphacoders.com/950/950826.jpg"
             alt=""
           />
@@ -32,8 +33,8 @@ function App() {
           </div>
         </div>
         {/* contenedor con margin en x */}
-        <div className="mx-5 md:mx-15 lg:mx-25 ">
-          <div className="flex flex-col">
+        <div className="containerInfo" >
+          <div className="flex flex-col relative" >
             <div className="  h-120 md:h-300 opacity-35 w-full flex bg-amber-700">
               <div className="flex flex-col w-1/2">
                 <img
@@ -55,7 +56,7 @@ function App() {
                 />
               </div>
             </div>
-            <p className="font-bold sm:text-lg md:text-3xl  text-center absolute mt-10 md:mt-120 mx-25 lg:mx-25  ">
+            <p className="font-bold sm:text-lg md:text-3xl  text-center absolute  " style={{top: "40%"}}>
               En Aromas & Maullidos somos amantes del café, de crear bonitos
               recuerdos pero sobre todo de los gatos, por esa razón contamos con
               una zona exclusiva para que puedas disfrutar de la compañia de
@@ -101,9 +102,9 @@ function App() {
             ></MenuItem>
           </div>
           {/* adopcion */}
-          <div className="mt-15 ">
+          <div className="" style={{marginTop: "50px"}}>
             <p className="text-3xl text-center">gatitos en adopción</p>
-            <p className="text-lg text-center mt-10 mb-15 mx-5 md:mx-35 ">
+            <p className="text-lg text-center" style={{marginTop: "30px", marginBottom: "50px"}}> 
               Como amantes de los gatos nuestra meta es facilitar la adopción
               responsable de aquellos que están de inquilinos en nuestra
               cafetería y andan necesitando una familia. En Aromas y Maullidos
@@ -122,7 +123,7 @@ function App() {
               vacunacion={catsList[catSelected].vacunacion}
               url={catsList[catSelected].url}
             />
-            <div className="flex gap-10 flex-wrap justify-between mt-10">
+            <div className="flex gap-10 flex-wrap justify-between " style={{marginTop: "50px"}}>
               {catsList.map((cat, index) => {
                 return (
                   <CircleCatItem
@@ -139,6 +140,7 @@ function App() {
           <div className="h-20"></div>
         </div>
       </div>
+     
     </>
   );
 }
